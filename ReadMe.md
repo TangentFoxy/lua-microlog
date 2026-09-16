@@ -1,6 +1,8 @@
 # microlog
 A small very flexible logging library for Lua.
 
+Public domain. Fuck IP law.
+
 ## Usage
 ```lua
 -- set arbitrary log levels to be printed immediately
