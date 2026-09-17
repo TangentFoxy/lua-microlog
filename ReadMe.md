@@ -36,3 +36,7 @@ wrapper function, I'm not your mom.
 ### What if I want my Lua to look like Java?
 Why do you want that? Use [moteus/lua-log](https://github.com/moteus/lua-log)
 I guess.
+
+## Why no releases?
+GitHub keeps unpublishing the releases on this repo. Open
+[tags](https://github.com/TangentFoxy/lua-microlog/tags) if no releases show up.
