@@ -11,10 +11,10 @@
 --   log(false) -- this deletes all stored messages
 --   -- set a maximum number of stored messages per log level
 --   log(50) -- warning: reaching large limits makes logging expensive
+--   -- check if a log level is being displayed
+--   if log.arbitrary_exit then log("arbitrary_exit") os.exit(1) end
 --   -- do anything to the stored messages (this example deletes them all)
---  log(function(messages) return {} end)
---  -- check if a log level is being displayed
---  if log.arbitrary_exit then log("arbitrary_exit") os.exit(1) end
+--   log(function(messages) return {} end)
 
 local microlog = {} -- display_levels are stored directly here
 local stored_messages = {}
