@@ -23,6 +23,13 @@ if log.arbitrary_exit then log("arbitrary_exit") os.exit(1) end
 log(function(messages) return {} end)
 ```
 
+Logging uses Lua's `tostring` method. This means you can customize how tables
+are printed using [Metamethods](https://www.lua.org/pil/13.html).
+
+When calling `log` with a function, if a table is returned, it will replace
+stored messages. Any other return type is ignored. This may be expanded for non-
+`nil` return types in the future.
+
 ### What if I need to send logs elsewhere?
 There are tools for redirecting console output. Your code shouldn't add such
 brittle dependencies. If you really need it to be in Lua, use [LuaLogging](https://lunarmodules.github.io/lualogging/).
@@ -40,3 +47,10 @@ I guess.
 ## Why no releases?
 GitHub keeps unpublishing the releases on this repo. Open
 [tags](https://github.com/TangentFoxy/lua-microlog/tags) if no releases show up.
+
+## Future Plans / Tasks
+- [ ] Make it optionally support colors.
+- [ ] Make it optionally function as a drop-in replacement (at least in terms of
+  how it is called) for the other logging libraries.
+- [ ] Add a way for this to serve as a middleman to another logging library, so
+  you can use their advanced features with the more simple API of this library.
