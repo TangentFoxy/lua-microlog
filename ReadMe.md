@@ -51,6 +51,13 @@ GitHub keeps unpublishing the releases on this repo. Open
 ## Future Plans / Tasks
 - [ ] Make it optionally support colors.
 - [ ] Make it optionally function as a drop-in replacement (at least in terms of
-  how it is called) for the other logging libraries.
+  how it is called) for the other logging libraries. (This would be to rely on
+  index or newindex to automatically handle calling non-existent values.)
+  (Is this actually possible? I assumed it was but I haven't checked.)
 - [ ] Add a way for this to serve as a middleman to another logging library, so
   you can use their advanced features with the more simple API of this library.
+- [ ] Use truthy values to allow *enabling* custom logging *without* printing at
+  every call. (So you can have complex logging code that doesn't print.)
+  This means the internal "if microlog[level]" check needs to explicitly check
+  `true` to print instead of what it does now. Technically a breaking change, so
+  save it for version 2.0.0
