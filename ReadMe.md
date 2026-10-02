@@ -61,3 +61,4 @@ GitHub keeps unpublishing the releases on this repo. Open
   This means the internal "if microlog[level]" check needs to explicitly check
   `true` to print instead of what it does now. Technically a breaking change, so
   save it for version 2.0.0
+- [ ] Use `pairs` to recognize nil values and print correctly despite them.
